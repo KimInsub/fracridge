@@ -176,8 +176,8 @@ debugmode = 0;    % if set to 1, we do some optional sanity checks
 
 % sanity checks
 assert(size(X,1)==size(y,1),'number of rows in X and y should match');
-assert(ismember(class(X),{'single' 'double'}),'X should be in single or double format');
-assert(ismember(class(y),{'single' 'double'}),'y should be in single or double format');
+% assert(ismember(class(X),{'single' 'double'}),'X should be in single or double format');
+% assert(ismember(class(y),{'single' 'double'}),'y should be in single or double format');
 assert(all(isfinite(X(:))),'X must have only finite values');
 assert(all(isfinite(y(:))),'y must have only finite values');
 
@@ -413,8 +413,8 @@ case 1
   end
 
   % deal with output (alphas is irrelevant, so set to [])
-  alphas = cast([],class(X));
-
+%   alphas = cast([],class(X));
+  alphas = [];
 end
 
 % rotate solution to the original space
